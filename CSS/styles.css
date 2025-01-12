@@ -1,0 +1,356 @@
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --gris: #757575;
+    --grisClaro:#DFE9F3;
+}
+/*Dimensiona, la pagina*/
+html{
+    /*font-size: 62.5%;*/
+    box-sizing: border-box; /*Hack para Box Model*/
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after{
+    box-sizing:inherit;
+} 
+
+/* Globales */
+p {
+    line-height: 2;
+}
+
+body{
+/*    font-size: 16px; /* 1rem = 10 px */
+    font-family: 'Krub', sans-serif;
+    /*Pone el fondo degradado: de arriba hacia abajo*/
+    background-image: linear-gradient(to top,  var(--grisClaro) 0h, var(--blanco) 100%);
+    min-height: 100%;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Krub', sans-serif;
+}
+
+h1,h2,h3, .centrar{
+    text-align: center;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*Genera la sombra: www.https://www.cssmatic.com/ */
+.sombra{
+    padding: 2rem; /*Agrega espacio entre el elemento anterior y este cuadro*/
+    margin-bottom: 3rem;
+    background-color: var(--blanco);
+    border-radius: 10px;    /*Redondea las equinas*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion{   
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion a{
+    padding: 1rem 2rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navegacion a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.navegacion a:last-of-type {
+    margin-bottom:0;
+}
+
+@media (min-width:768px) {
+    .navegacion a{
+        margin-bottom: 0;
+    }
+}
+
+.enlace{
+    text-decoration: none;
+}
+
+.hero, .areas, .proyectos{
+    height: 450px;
+    background-image: url(../img/hero.jpg);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.areas{
+    background-image: url(../img/LeyOhm.jpg);
+    background-size: cover;
+}
+.proyectos{
+    background-image: url(../img/RVDPruebas.jpg);
+    background-size: cover;
+}
+
+.contenido-hero{
+    /*Pone una sobra, sobre la imagen*/
+    /*background-color:rgba(0,0,0, 0.5); /*sintaxis anterior*/
+    background-color: rgb( 0 0 0 / 70%); /*crea un cuadro del tamaño de la imagen, con un 70% de transferencia*/
+     position: absolute; /* ubica el cuadro sobre la imagen*/
+    /*dimensiona el cuadro en toda la imagen*/
+     width: 100%;
+     height: 100%;
+    /*Codigo para alinear horizontal y verticalmente, puedeusarse en todos los proyectos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Pone el contenido de h2 y p color blanco*/
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco); 
+}
+
+/*Creacion Boton*/
+.boton{
+    /*Pone el color del boton (fondo de "Contactar"*/
+    background-color: var(--secundario);
+    /*Pone el color del texto blanco*/
+    color: var(--blanco);
+    /*agrega un poco de separacion entre los elementos superiores y el boton*/
+    margin-top: .5rem;
+    /*agranda un poco el fondo*/
+    padding: .5rem 3rem;
+    /*pone el borde del boton redondeado*/
+    border-radius: 0.5rem;
+    /*pone en negritas el texto*/
+    font-weight: bold;
+    /*quita la linea inferior del enlace*/
+    text-decoration: none;
+    /*pone el texto en mayusculas*/
+    text-transform: uppercase;
+    /*agranda un poco el texto*/
+    font-size: 1.2rem;
+    /*quita la sombra del segundo boton, en el enlace no 
+    tiene sobra*/
+    border: none;
+    /*ancho del boton, para cuando se vea en celulares*/
+    /*width: 90%;
+    /*y lo centra*/
+    /*text-align: center;*/
+}
+
+.boton:hover{
+    cursor:pointer;
+}
+
+/*Rutina para scroll*/
+header,
+.contenido-hero,
+.principal, /*experience.html*/
+.w-Info,
+.e-Info,
+.i-Info,
+.tm-Info,
+.t-Info,
+.formulario,
+footer{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/*Servicios*/
+@media(min-width: 760px){
+    .servicios{
+        /*Crea una malla para contener los elementos*/
+        display: grid;
+        /*grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px;*/
+        /*grid: 200px 800px / 300px 300px;esta linea es quivalente a las lineas anteiores*/
+        grid-template-columns: 1fr 1fr 1fr; /*divide el espacio en fraciones*/
+        column-gap: 1rem;
+    }
+}
+
+.servicio{
+    text-align:center
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos{
+    /*Habilitamos un display flex, que nos da acceso a justify-content
+    y align-items, para centrarlos*/
+    display: flex;
+    /*Crea los cicrulos amarillos*/
+    height: 15rem;
+    width: 15rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primario);
+    border-radius: 50%; /*como la figura es un cuadro, la redondea al 50% para que sea un circulo*/  
+}
+
+.iconos i {
+    font-size: 2rem;
+    color: var(--oscuro);
+}
+
+/*Contacto*/
+.formulario{
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    /*width: min( 60rem, 100%);/*uitiliza el mas chico*/
+    /*margin: 0 auto;*/
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primario);
+    margin-bottom: 1rem;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#correo{
+    text-transform: lowercase;
+}
+@media (min-width:768px) {
+    .formulario {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.contenedor-campos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.campo{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+@media (min-width:480px) {
+    .campo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .campo{
+        flex: 0 0 calc(50% - .5rem)
+    }
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+@media (min-width:480px) {
+    .campo label {
+        flex: 0 0 90px;
+    }
+}
+
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="mail"],
+.campo textarea {
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+@media (min-width: 768px) {
+    :is(.campo) :is( 
+        input[type="text"], 
+        input[type="text"],  
+        input[type="tel"],  
+        input[type="mail"] , 
+        textarea ) {
+        flex: 1;
+    }
+}
+
+.w-100{
+    width: 100%;
+}
+
+@media(min-width: 768px){
+    .w-100{
+        width: auto;
+    }
+}
+
+.campo textarea{
+    height: 4rem;;
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+.imgPres{
+    border-radius: 50%;
+}
+.iconoFacebook{
+    width: 30px;
+}
+.footer {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--secundario);
+}

@@ -4,172 +4,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Veliz Engineer</title>
-    <link rel= "preload" href="CSS/normalize.css" as="style">
-    <link reL= "stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link href="css/styles.css" rel="stylesheet">
+    <title>Rafael Veliz</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main>
-        <h1>Rafael Veliz Deras</h1>
-        <h2>Electronics Engineer & Front End Developer</h2>
-        <hr>
-        <p> 
-            Highly Capable Engineer with more than 5 years of experience design hardware and programming embedded systems,
-             I have experience with microcontrollers and Real Time Operating System, and Development web pages with HTML,
-             CSS and JavaScript.
+    <header class="header">
+            <h1>Rafael Veliz, Electronics Engineer</h1>
+    </header>
+
+    <div class="nav-bg">
+        <!--<nav class="navegacion-principal contenedor">-->
+        <nav class="navegacion contenedor">
+            <a href="index.html">Home</a>
+            <a href="areas.html">Areas</a>
+            <a href="projects.html">Projects</a>
+            <a href="areas.html#contacto">Contact</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="contenido-hero">
+            <!--<h2 class="titulo">Diseño y desarrollo Web <span>Freelancer</span></h2>-->
+            <h2>System Embedded & Web Developer</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
+              </svg>Durango, Mexico</p>
+                <p>Durango, Mexico</p>
+            
+            <a  class= "boton" href="areas.html#contacto">Contact</a>    
+        </div> <!--cierra la clase contenido-hero-->
+    </div>
+
+    <div class="contenedor sombra">        
+      <main>
+        <div class="row align-items-center">
+          <div class="col-12 col-sm-2 principal centrar">
+            <img src="img/RVD 25032022.jpg" class="img-fluid imgPres" alt="Rafael">
+          </div>
+          <div class="col-12 col-sm-10 align-self-start">
+            <h3>About Me</h3>
+            <p>Highly Capable Engineer with experience design hardware
+               and programming embedded systems, I have experience with microcontrollers 
+               and Real Time Operating System, and Development web pages with HTML, CSS, 
+               Bootstrap, Styled Components, JavaScript, React, Python, Flask, Embedded Javascript (EJS), 
+               SQL, Node.js, Firebase, Auth0, Axios,  etc.
+              </p>
+          </div>
+        </div>
+
+        <h3 class="w-Info">Work Experience</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Period</th>
+                <th scope="col">Position</th>
+                <th scope="col">Company</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">2008-Actual</td>
+                <td>Manager</td>
+                <td>Intelligent Didactic Games</td>
+              </tr>
+              <tr>
+                <td colspan="2">2008 - Actual</td>
+                <td>Operations Manager</td>
+                <td>Diseño y Construcciones con Glamour S.A.S. de C.V.</td>
+              </tr>
+              <tr>
+                <td colspan="2">2004-2007</td>
+                <td>Development Manager</td>
+                <td>Servicios Electromecanicos y Diseño S.A.de C.V.</td>
+              </tr>
+              <tr>
+                <td colspan="2">1999-2004</td>
+                <td>Development Leader</td>
+                <td>Integra Ingenieria y Diseño S.A. DE C.V.</td>
+              </tr>
+              <tr>
+                <td colspan="2">1998-1999</td>
+                <td>Electronics Design Engineer</td>
+                <td>Ifo Identiformas</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+        
+      <section>
+        <h3 class="e-Info">Academic references</h3>
+        <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Grade</th>
+                <th scope="col">Institute</th>
+                <th scope="col">Speciallity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Bachelor's Degree</td>
+                <td>Institute Technological of Durango</td>
+                <td>Electronics Engineering</td>
+              </tr>
+              <tr>
+                <td colspan="2">Diploma</td>
+                <td>Institute National Polytechnic</td>
+                <td>Design and object-oriented programming</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="i-Info">Main Courses</h3>
+        <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Date</th>
+                <th scope="col">Institute</th>
+                <th scope="col">Course</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">September 2022</td>
+                <td>UDEMY</td>
+                <td>Mastering CAN Network: Vector CANoe, CANalyzer, CAPL & Theory</td>
+              </tr>
+              <tr>
+                <td colspan="2">September 2022</td>
+                <td>UDEMY</td>
+                <td>Master en Python: Aprender Python 3, Django, Flask y Tkinter</td>
+              </tr>
+              <tr>
+                <td colspan="2">August 2022</td>
+                <td>UDEMY</td>
+                <td>How to program an Arduino for CAN bus Network Communication</td>
+              </tr>
+              <tr>
+                <td colspan="2">August 2022</td>
+                <td>UDEMY</td>
+                <td>Embedded Communication Protocols - Beginner's Masterclass</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="tm-Info">November 2021 - March 2022</td>
+                <td>UDEMY</td>
+                <td>The Complete Web Development Bootcamp</td>
+              </tr>
+              <tr>
+                <td colspan="2">October-December, 2021</td>
+                <td>UDEMY</td>
+                <td>SCRUM</td>
+              </tr>
+              <tr>
+                <td colspan="2">October-November, 2021</td>
+                <td>UDEMY</td>
+                <td>AutoSAR Arcitecture (Learn from Scratch with Demo)</td>
+              </tr>
+              <tr>
+                <td colspan="2">October-November, 2021</td>
+                <td>UDEMY</td>
+                <td>An Introduction to the Controller Area Network (BusCAN) Bus</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="t-Info">Teaching</h3>
+        <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Period</th>
+                <th scope="col">City</th>
+                <th scope="col">Institute</th>
+                <th scope="col">Course</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Julie 7, 2003</td>
+                <td>Acapulco, Guerrero, Mexico</td>
+                <td>IEEE Mexico</td>
+                <td>Data Control Units (DCUs) applied to electrical substations</td>
+              </tr>
+              <tr>
+                <td colspan="2">June 11-15, 2001</td>
+                <td>Mexico, city</td>
+                <td>Compañía de Luz y Fuerza del Centro</td>
+                <td>Protocolo DNP3.0 and CommSet</td>
+              </tr>
+              <tr>
+                <td colspan="2">October 18-22, 1999</td>
+                <td>Hermosillo, Sonora, Mexico</td>
+                <td>C.F.E. Northwest Distribution Division</td>
+                <td>Communication simulators</td>
+              </tr>
+            </tbody>
+          </table>
+      </section>
+
+    </div> <!--cierra contenedor sombra-->  
+
+    <footer class="footer header">
+        <p>Copyrigth  
+          <script>
+            const fecha = new Date();
+            const hoy = fecha.toUTCString()
+            let dia = hoy.slice(0, 16);
+            document.write(dia)
+            console.log(dia);
+        </script>
+         Rafael Veliz, System Embedded & Front End Developer   
+         <a href="https://www.facebook.com/rafael.velizderas">
+          <img class="iconoFacebook" src="./img/facebook.png" alt="facebook"></img>
+         </a>
         </p>
-        <hr>
-        <h3>Main Skills</h3>
-        <ul>
-            <li>Problem solving.</li>
-            <li>Working under pressure.</li>
-            <li>Self-learning.</li>            
-        </ul>
-        <hr>
-    </main>
-
-    <h3>Work experience</h3>
-    <table cellspacing="20">
-        <tr>
-            <th>Dates</th>
-            <th>Work</th>
-            <th>Enterprise</th>
-        </tr>
-        <tr>
-            <td>2008-Actual</td>
-            <td>Project Leader</td>
-            <td>Own Bussines</td>
-        </tr>
-        <tr>
-            <td>2014 - Actual</td>
-            <td>Operations Manager</td>
-            <td>Diseño y Construcciones con Glamour S.A.S. de C.V.</td>
-        </tr>
-        <tr>
-            <td>2004-2007</td>
-            <td>Development Manager</td>
-            <td>Servicios Electromecanicos y Diseño S.A. DE C.V.</td>
-        </tr>
-        <tr>
-            <td>1999-2004</td>
-            <td>Electronics Design Engineer</td>
-            <td>Integra Ingenieria y Diseño S.A. DE C.V.</td>
-        </tr>
-        <tr>
-            <td>1998-1999</td>
-            <td>Electronics Design Engineer</td>
-            <td>Ifo Identiformas</td>
-        </tr>
-    </table>
-    <hr>
-
-    <table cellspacing="10">
-        <thead>Academic references</thead>
-        <tr>
-            <td>Grade</td>
-            <td>Speciallity</td>
-            <td>Institute</td>
-        </tr>
-        <tr>
-            <td>Bachelor´s Degree</td>
-            <td>Electronics Engineering</td>
-            <td>Institute Technological of Durango.</td>
-        </tr>
-        <tr>
-            <td>Diploma</td>
-            <td>Design and object-oriented programming</td>
-            <td>Institute National Polytechnic</td>
-        </tr>
-    </table>
-    <hr>
-
-    <p>
-        Languages.<br>
-        English: advanced
-    </p>
-    <hr>
-
-    <table cellspacing="10">
-        <thead>Other courses</thead>
-        <tr>
-            <td>AutoSAR</td>
-            <td>UDEMY</td>
-            <td>October-November, 2021</td>
-        </tr>
-        <tr>
-            <td>BusCAN</td>
-            <td>UDEMY</td>
-            <td>October-November, 2021</td>
-        </tr>
-        <tr>
-            <td>SCRUM</td>
-            <td>UDEMY</td>
-            <td>October-December, 2021</td>
-        </tr>
-    </table>
-    <hr>
-
-    <table cellspacing="10">
-        <thead>Teaching</thead>
-        <tr>
-            <td>Data Control Units (DCUs) applied to electrical substations</td>
-            <td>IEEE Mexico</td>
-            <td>Acapulco, Guerrero, Mexico</td>
-            <td>Julie 7, 2003</td>
-        </tr>
-        <tr>
-            <td>Protocolo DNP3.0 and CommSet</td>
-            <td>Compañía de Luz y Fuerza del Centro</td>
-            <td>Mexico, city</td>
-            <td>June 11-15, 2001</td>
-        </tr>
-        <tr>
-            <td>Communication simulators</td>
-            <td>C.F.E. Northwest Distribution Division</td>
-            <td>Hermosillo, Sonora, Mexico</td>
-            <td>October 18-22, 1999</td>
-        </tr>
-    </table>
-    <hr>
-
-    <table cellspacing="10"> <!--border="1"-->
-        <thead>Skills</thead>
-        <tr>
-            <td>C/C++</td>
-            <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>Assembler MCS8051</td>
-            <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>HTML(5)</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>CSS(3)</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td>Javascript</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-    </table>
-    <hr>
-
-    <a href="works.html">Work Expense</a>
-    <a href="general.html">Information General</a>
-    <a href="hobbies.html">My Hobbies</a>
-    <a href=#>Contact me</a>
-
-    <footer>
-        <p>Todos los derechos reservados, Rafael Veliz Deras Electronics Engineer & Front End Developer</p>
+        
     </footer>
 
+    <script src="https://kit.fontawesome.com/286aad49a9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
